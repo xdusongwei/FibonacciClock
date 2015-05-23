@@ -1,0 +1,52 @@
+﻿<Window x:Class="FibonacciClock.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        AllowsTransparency="True" WindowStyle="None" ResizeMode="NoResize"
+        ShowInTaskbar="False" Topmost="True" Background="Transparent"
+        Title="MainWindow" Height="100" Width="160" Loaded="Window_Loaded" MouseDown="Window_MouseDown" MouseDoubleClick="Window_MouseDoubleClick">
+    <Grid>
+        <Grid.Resources>
+            <Style TargetType="{x:Type Border}">
+                <Setter Property="BorderThickness" Value="1" />
+                <Setter Property="BorderBrush" Value="Black" />
+                <Setter Property="Opacity" Value="0.72" />
+            </Style>
+        </Grid.Resources>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*" />
+            <ColumnDefinition Width="5*" />
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*" />
+                <RowDefinition Height="3*" />
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Border x:Name="bdTwo" Grid.Column="0" BorderThickness="0,0,1,1" Margin="2,2,0,0" />
+                <Grid Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Border x:Name="bdOneB" Grid.Row="0" >
+                        
+                    </Border>
+                    <Border x:Name="bdOneA" Grid.Row="1">
+                        
+                    </Border>
+                </Grid>
+            </Grid>
+            <Border x:Name="bdThree" Grid.Row="1" BorderThickness="0,1,1,0" Margin="2,0,0,2">
+                
+            </Border>
+        </Grid>
+        <Border x:Name="bdFive" Grid.Column="1" BorderThickness="1,0,0,0" Margin="0,2,2,2"/>
+        <Border Grid.ColumnSpan="2" BorderThickness="3" CornerRadius="2">
+
+        </Border>
+    </Grid>
+</Window>
